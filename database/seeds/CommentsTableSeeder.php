@@ -56,5 +56,13 @@ class CommentsTableSeeder extends Seeder
       'body' => "# リンク\n\n- [Google先生](https://www.google.com/)\n\n- [https://www.kobegakuin.ac.jp/](https://www.kobegakuin.ac.jp/)"
     ]);
 
+    DB::table('comments')->insert([
+      'body' => "## MathJax\r\n- MathJaxを使って \\\\(ax^2 + bx + c = 0\\\\) のように数式が書けます．\r\n\r\n- インライン数式は＼＼（数式＼＼）のように書きます．"
+    ]);
+
+    DB::table('comments')->insert([
+      'body' => "## MathJax\r\n- ディスプレイ数式は＄＄数式＄＄ で書くことができます．\$\$\int_{0}^{t_0}S(x)dx\$\$"
+    ]);
+
   }
 }
