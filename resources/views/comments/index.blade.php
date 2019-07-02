@@ -77,8 +77,9 @@
 
                 <div class="comments">
                   <ul>
-                    <li>ほげほげ</li>
-                    <li>ふがふが ふがふが ふがふが ふがふが ふがふが ふがふが ふがふが ふがふが ふがふが ふがふが ふがふが ふがふが ふがふが ふがふが</li>
+                    @foreach($comments as $comment)
+                      <li>{{ $comment->body }}</li>
+                    @endforeach
                   </ul>
                 </div>
             </div>
