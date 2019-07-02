@@ -18,7 +18,9 @@ class CommentsTableSeeder extends Seeder
     ]);
 
     DB::table('comments')->insert([
-      'body' => '## サブタイトル\n- 箇条書き1\n- 箇条書き項目2'
+      'body' => "## サブタイトル
+- 箇条書き1
+- 箇条書き項目2"
     ]);
   }
 }
