@@ -76,11 +76,13 @@
                 </div>
 
                 <div class="comments">
-                  <ul>
-                    @foreach($comments as $comment)
-                      <li>{{ $comment->body }}</li>
-                    @endforeach
-                  </ul>
+                  <hr>
+                  @foreach($comments as $comment)
+                    <div>
+                    {!! $comment->mark_body !!}
+                    </div>
+                    <hr>
+                  @endforeach
                 </div>
             </div>
         </div>
