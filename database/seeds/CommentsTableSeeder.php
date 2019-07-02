@@ -35,9 +35,27 @@ class CommentsTableSeeder extends Seeder
     ]);
 
     DB::table('comments')->insert([
-      'body' => "# 箇条書き\n\n- 箇条書き\n- 箇条書き\n    - 階層化\n    - 先頭にスペースを入れて階層化\n- 元のレベル",
+      'body' => "# 段落内での改行\n\n段落内で改行したい場合は  \n改行の前にスペースを2つ入力すると良い",
+      'created_at' => '2019-07-02 12:02:30',
+      'updated_at' => '2019-07-02 12:02:30'
+    ]);
+
+    DB::table('comments')->insert([
+      'body' => "# 箇条書き\n\n- ハイフン\n- ハイフンを先頭に\n    - 階層化\n    - 先頭にスペースを入れて階層化\n- 元のレベル",
       'created_at' => '2019-07-02 12:03:00',
       'updated_at' => '2019-07-02 12:03:00'
+    ]);
+
+    DB::table('comments')->insert([
+      'body' => "# 箇条書き\n\n* アスタリスク\n* アスタリスクを先頭に\n    * 階層化\n    * 先頭にスペースを入れて階層化\n* 元のレベル",
+      'created_at' => '2019-07-02 12:03:10',
+      'updated_at' => '2019-07-02 12:03:10'
+    ]);
+
+    DB::table('comments')->insert([
+      'body' => "# 箇条書き\n\n+ プラス記号\n+ プラス記号を先頭に\n    + 階層化\n    + 先頭にスペースを入れて階層化\n+ 元のレベル",
+      'created_at' => '2019-07-02 12:03:20',
+      'updated_at' => '2019-07-02 12:03:20'
     ]);
 
     DB::table('comments')->insert([
