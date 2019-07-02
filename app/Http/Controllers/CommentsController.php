@@ -8,6 +8,7 @@ class CommentsController extends Controller
 {
   public function index()
   {
-    dd('comments');
+    // dd('comments');
+    return view('comments.index');
   }
 }
