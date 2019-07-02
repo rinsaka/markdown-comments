@@ -83,6 +83,20 @@
                     </div>
                     <hr>
                   @endforeach
+                  <div>
+                    <form method="post" action="{{ url('/comments') }}">
+                      @csrf
+                      <p>
+                        <textarea name="body" placeholder="body" rows="4" cols="50">{{ old('body') }}</textarea>
+                        @if ($errors->has('body'))
+                          <span class="error">{{ $errors->first('body') }}</span>
+                        @endif
+                      </p>
+                      <p>
+                        <input type="submit" value="Add New Comment">
+                      </p>
+                    </form>
+                  </div>
                 </div>
             </div>
         </div>

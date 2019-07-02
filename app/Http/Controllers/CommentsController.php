@@ -14,4 +14,16 @@ class CommentsController extends Controller
     return view('comments.index')
             ->with('comments', $comments);
   }
+
+  public function store(Request $request)
+  {
+    $this->validate($request, [
+      'body' => 'required'
+    ]);
+
+    $comment = new Comment();
+    $comment->body = $request->body;
+    $comment->save();
+    return redirect('/comments');
+  }
 }
